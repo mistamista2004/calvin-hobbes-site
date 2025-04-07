@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>August's Epic Site</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Comic Sans MS, cursive, sans-serif;
+      background: linear-gradient(135deg, #FFD700, #FF69B4);
+      overflow: hidden;
+      color: #222;
+    }
+    header {
+      background: #000;
+      color: #fff;
+      text-align: center;
+      padding: 1em;
+      font-size: 2em;
+      background-image: url('https://media.giphy.com/media/d31w24psGYeekCZy/giphy.gif');
+      background-size: cover;
+    }
+    .content {
+      padding: 2em;
+      max-width: 800px;
+      margin: auto;
+      background: rgba(255,255,255,0.8);
+      border-radius: 10px;
+    }
+    .stickman {
+      position: absolute;
+      width: 40px;
+      height: 60px;
+      pointer-events: none;
+    }
+    .stickman img {
+      width: 100%;
+      height: auto;
+    }
+    audio {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <audio autoplay loop>
+    <source src="https://www.bensound.com/bensound-music/bensound-epic.mp3" type="audio/mpeg">
+    Your browser is too lame to support audio :(
+  </audio>
+
+  <header>
+    August — Featuring Calvin & Hobbes Dance Extravaganza 💃🕺
+  </header>
+
+  <div class="content">
+    <h2>About Me</h2>
+    <p>
+      Yo, I’m August. I code, I chill outside, and I have a 2012 MacBook that I modded into a beast. 
+      I'm basically the wizard of fun and wires. My cousin is my partner-in-crime, and we do everything together.
+      Calvin and Hobbes? Absolute legends. My life’s a mix of adventure, cartoons, and random coolness.
+    </p>
+
+    <h2>Cool Stuff I Do:</h2>
+    <ul>
+      <li>💻 Coding things that sometimes work (and sometimes explode).</li>
+      <li>🌳 Climbing trees while yelling random facts.</li>
+      <li>🎨 Drawing questionable masterpieces.</li>
+      <li>🧠 Thinking very deep thoughts like “why do we have toenails?”</li>
+    </ul>
+  </div>
+
+  <div class="stickman" id="stickman">
+    <img src="https://i.imgur.com/3XUb5zM.png" alt="Stickman">
+  </div>
+
+  <script>
+    const stickman = document.getElementById('stickman');
+    document.addEventListener('mousemove', (e) => {
+      stickman.style.left = e.pageX + 10 + 'px';
+      stickman.style.top = e.pageY + 10 + 'px';
+    });
+  </script>
+</body>
+</html>
+
